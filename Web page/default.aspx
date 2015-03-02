@@ -5,9 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Saiyin's Sick Mortgage Calculator</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" media="screen" />
 </head>
 <body>
-    <header>Mortgage Calculator</header>
+    <header>Mortgage Calculator</header><br /><br /><br />
     <form id="form1" runat="server">
     <div>
    
@@ -40,12 +41,23 @@
 
         
         <br /><br />
+
                 
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+    
         
         <br /><br />
+      <%If Not IsPostBack Then%>
+        <p>Welcome to Saiyin's mortgage calculator. Please fill out information above to complete the calculation</p>
+        <%Else%>
+         Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+              
+             
+        <br /><br />
         
-        <asp:GridView ID="loanGridView" runat="server" Width="211px" />
+        <asp:GridView ID="loanGridView" runat="server" Width="211px" BorderColor="Gray" BorderStyle="Solid" BorderWidth="5px" >
+            <RowStyle BackColor="#666666" HorizontalAlign="Center" />
+        </asp:GridView>
+        <%End If%>
             
         </div>
     </form>

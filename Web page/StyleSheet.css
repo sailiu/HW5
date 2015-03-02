@@ -1,0 +1,17 @@
+﻿body {
+    background-color:gray;
+    margin:30px;
+}
+
+header {
+    font-size:35pt;
+    background-color:black;
+    color:white;
+    padding-left:20px;
+}
+
+#form1 {
+    background:black;
+    color:white;
+    padding:20px;
+}
